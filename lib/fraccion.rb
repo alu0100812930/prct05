@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 
 class Fraccion
     attr_accessor :n  
@@ -45,7 +46,36 @@ class Fraccion
         Fraccion.new(@n*other.d, @d*other.n)
     end
     
-       
+    def == (other)
+        cociente = @n/@d
+        cociente == other.n/other.d
+    end
+    
+    def != (other)
+         cociente = @n/@d
+        cociente != other.n/other.d
+    end
+    
+    def > (other)
+        cociente = @n/@d
+        cociente > other.n/other.d
+    end
+    
+    def >= (other)
+        cociente = @n/@d
+        cociente >= other.n/other.d
+    end
+    
+      def < (other)
+        cociente = @n/@d
+        cociente < other.n/other.d
+      end
+      
+      def <= (other)
+        cociente = @n/@d
+        cociente <= other.n/other.d
+      end
+      
 end
 
 
