@@ -15,9 +15,9 @@ task :aritmetica do
   sh "ruby -I. test/tc_fraccion.rb -n /test_aritmetica/"
 end
 
-desc "Ejecutar solo las pruebas logicas"
-task :logica do
-  sh "ruby -I. test/tc_fraccion.rb -n /test_logica/"
+desc "Ejecutar solo las pruebas comparacions"
+task :comparacion do
+  sh "ruby -I. test/tc_fraccion.rb -n /test_comparacion/"
 end
 
 desc "Ejecutar solo las pruebas de fallos aritmeticos"
@@ -26,6 +26,6 @@ task :falloaritmetica do
 end
 
 desc "Ejecutar solo las pruebas de fallos logicos"
-task :fallologica do
-  sh "ruby -I. test/tc_fraccion.rb -n /test_fallologica/"
+task :fallocomparacion do
+  sh "ruby -I. test/tc_fraccion.rb -n /test_fallocomparacion/"
 end
