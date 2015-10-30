@@ -4,9 +4,15 @@ class Fraccion
     attr_accessor :n  
     attr_accessor :d
     def initialize(n, d)
+        raise ArgumentError, 'error en el numerador' unless n.is_a? Numeric
+        raise ArgumentError, 'error en el denominador' unless d.is_a? Numeric
         mcm = mcm(n,d)
         @n = n/mcm
+    if d!=0
         @d = d/mcm
+    else
+        raise "Indeterminación"
+    end
         
     end
     def mcm(a,b)

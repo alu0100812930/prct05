@@ -27,6 +27,8 @@ class TestPoint < Test::Unit::TestCase
   end
   
 def test_falloobjeto
+   assert_raise(RuntimeError){Fraccion.new(1,0)}
+        assert_raise(ArgumentError){Fraccion.new(1,'1')}
   
 end
 
